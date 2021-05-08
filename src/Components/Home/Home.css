@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700&display=swap');
+/* Design */
+
+body{
+    margin: 0;
+    padding:0;
+    font-family: 'Lato', sans-serif;
+    background-color: #fff;
+}
+
+.main{
+    width: 1200px;
+    max-width: 100%;
+    margin: 0 auto;
+}
+.card-container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    padding: 0;
+    width: 90%;
+}
+.cards_item {
+    display: flex;
+    padding: 1rem;
+  }
+
+  .card {
+    background-color: white;
+    border-radius: 0.25rem;
+    box-shadow: 0 7px 15px 0px rgb(0 0 0 / 25%);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    width: 500px;
+    max-width: 100%;
+    position: relative;
+  }
+
+  .card_content{
+    padding:1.5rem;
+  }
+  .card_image{
+      width: 100%;
+     
+  }
+  .learn-more-btn::after{
+      position: absolute;
+      content: '';
+      width: 100%;
+      height: 100%;
+      top:0;
+      left:0;
+      background-color: rgba(0,0,0,.7);
+      z-index: -11;
+      opacity: 1;
+      transition: opacity .5s ease-in-out;
+  }
+  .learn-more-btn {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    z-index: 999;
+    width: 100%;
+    height: 300px;
+    transition: opacity .5s ease-in-out;
+  }
+  .card:hover .learn-more-btn{
+      opacity: 1;
+  }
+  .learn-more-btn p {
+    position: absolute;
+    top: 115px;
+    left: 200px;
+}
+  .learn-more-btn p a{
+      font-size: 20px;
+      color:#fff;
+      text-decoration: none;
+      transition: opacity .5s ease-in-out;
+  }
+  .card_image img {
+    height: 300px;
+    max-width: 100%;
+    width: fit-content;
+    vertical-align: middle;
+  }
+  .card_title {
+    color: #2E353A;
+    font-size: 1.5rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin: 0px;
+    font-family: 'Lato', sans-serif;
+  }
+  .card_content{
+      color:#C4CBD0;
+      font-size: 14px;
+  }
+.card-footer{
+    display: flex;
+    justify-content: space-between;
+    
+}
+.card-footer p img{
+  width:50px;
+  height:50px;
+  border-radius: 50%;
+}
+.card-footer p{
+    font-size: 12px;
+}
+.card_image button{
+  float:right;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  border-color: transparent;
+  background-color: transparent;
+  cursor: pointer;
+  font-size: 25px;
+}
+
+.ReactModal__Overlay--after-open{
+  z-index: 99999;
+  background-color: rgba(0,0,0,.8)!important;
+}
+.ReactModal__Content--after-open{
+  background-color: transparent!important;
+  border: none!important;
+}
+  @media (max-width:425px){
+    .card {
+        width: 90%;
+        margin: 0 auto;
+    }
+  }
